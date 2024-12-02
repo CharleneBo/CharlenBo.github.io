@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Inclusion d'AlpineJS -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
 <body>
 
@@ -12,7 +14,6 @@
     
     <h2>on croise les doigts </h2>
     <p>on test les branches</p>
-
 
     <h2>Formulaire</h2>
      <form action="https://jsonplaceholder.typicode.com/posts" method="POST">
@@ -27,7 +28,7 @@
         <button type="submit">Envoyer</button>
     </form>
 
-     <h2>Liste des tags liés à la typographie</h2>
+    <h2>Liste des tags liés à la typographie</h2>
     <ul>
         <li><strong>&lt;strong&gt;</strong> : Utilisé pour indiquer du texte important (en gras).</li>
         <li><strong>&lt;em&gt;</strong> : Utilisé pour indiquer du texte mis en emphase (en italique).</li>
@@ -44,6 +45,18 @@
         <li><strong>&lt;sub&gt;</strong> : Utilisé pour indiquer du texte en indice.</li>
         <li><strong>&lt;sup&gt;</strong> : Utilisé pour indiquer du texte en exposant.</li>
     </ul>
-    
+
+    <h2>Exemple avec AlpineJS</h2>
+    <p>test commit sur la branche FEAT_ALP</p>
+    <div x-data="{ show: false }">
+        <button @click="show = !show">
+            <span x-show="!show">Afficher l'élément</span>
+            <span x-show="show">Cacher l'élément</span>
+        </button>
+        <p x-show="show" style="margin-top: 10px;">
+            Ceci est un exemple de contenu contrôlé par AlpineJS. Il peut être affiché ou caché en cliquant sur le bouton ci-dessus.
+        </p>
+    </div>
+
 </body>
 </html>
